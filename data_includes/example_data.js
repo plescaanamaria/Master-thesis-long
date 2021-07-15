@@ -18,15 +18,16 @@ function Pick(set,n) {
 
 
 
-PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Master/")
+    //PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Master/")  ~ OLD SERVER HOST ~
+    PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Ibex_MA_Reg/")
     //PennController.DebugOff() // use for the final version
     PennController.Sequence( "welcome",
     "instructions",
     "practice", "end_practice",
-    pick(list = seq("experiment_trial"),22), "break1", //22
-    pick(list,22), "break2", //44
-    pick(list,22), "break3", //66
-    pick(list,22), "end_exp", //88
+    pick(list = seq("experiment_trial"),30), "break1", //30
+    pick(list,30), "break2", //60
+    pick(list,30), "break3", //90
+    pick(list,30), "end_exp", //120
     "post-ques", "send", "final");
 
 
