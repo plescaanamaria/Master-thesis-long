@@ -18,15 +18,15 @@ function Pick(set,n) {
 
 
 
-PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Master/")
+    PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Master/")
     //PennController.DebugOff() // use for the final version
     PennController.Sequence( "welcome",
     "instructions",
     "practice", "end_practice",
-    pick(list = seq("experiment_trial"),22), "break1", //22
-    pick(list,22), "break2", //44
-    pick(list,22), "break3", //66
-    pick(list,22), "end_exp", //88
+    pick(list = seq("experiment_trial"),30), "break1", //30
+    pick(list,30), "break2", //60
+    pick(list,30), "break3", //90
+    pick(list,30), "end_exp", //120
     "post-ques", "send", "final");
 
 
@@ -595,7 +595,7 @@ PennController("instructions",
                        + "<p>Sobald Du jeden Satzteil (Wort) gelesen hast, dr&uuml;cke die <b>Leertaste</b> <b>mit dem rechten Daumen</b> (wenn Du rechtsh&auml;ndig bist), um den n&auml;chsten Satzteil zu enth&uuml;llen."
                        + "Wenn Du das Ende des Satzes erreicht hast, dr&uuml;cke erneut die Leertaste."
                        + "<p><b>Versuche die Leertaste erst dann zu dr&uuml;cken, wenn Du jeden Satzteil vollst&auml;ndig gelesen hast</b>. "
-                       + " Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen. Das widerspricht dem ganzen Sinn des Experiments. Danke!"
+                       + " Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten. Danke!"
                        
                       )
                .settings.css("font-size", "20px")
@@ -817,7 +817,7 @@ PennController("instructions",
 // PRACTICE ITEMS
 //******************************************************************************************************************************************
 
-PennController.Template( PennController.GetTable("master_spr1_short.csv")
+PennController.Template( PennController.GetTable("master_spr1_long.csv")
                          .filter("type" , "practice")
                          ,  
                          variable => ["practice",
@@ -1080,7 +1080,7 @@ PennController( "end_practice" ,
 //******************************************************************************************************************************************
 
 
-PennController.Template( PennController.GetTable("master_spr1_short.csv")
+PennController.Template( PennController.GetTable("master_spr1_long.csv")
                          .filter("type" , (/^(critical|filler)$/))
                          ,  
                          variable => ["experiment_trial",
@@ -1593,7 +1593,7 @@ PennController.Template(PennController.GetTable("validation.csv")// change this 
                                                     .settings.center()
                                                     .print()
                                                     ,
-                                                    newText ("<p><b>"+variable.val_code+".</b></p>")
+                                                    newText ("<p><b>"+"L1PILMAREGLG"+".</b></p>")
                                                     .settings.css("font-family","times new roman") .settings.css("font-size", "30px")
                                                     .settings.center()
                                                     .settings.log("all")
