@@ -18,11 +18,9 @@ function Pick(set,n) {
 
 
 
-<<<<<<< HEAD
+
     PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Master/")
     //PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Master/")  ~ OLD SERVER HOST ~
-    PennController.AddHost("https://amor.cms.hu-berlin.de/~plescaan/Ibex_MA_Reg/")
->>>>>>> a0262a260c1934670a0fff0fb898373e1fb0e893
     //PennController.DebugOff() // use for the final version
     PennController.Sequence( "welcome",
     "instructions",
