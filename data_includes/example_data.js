@@ -592,11 +592,11 @@ PennController("instructions",
                ,
                
                newText("instructions_a", "<b>Deine Aufgaben w&auml;hrend des Experiments:</b><p>"
-                       + "In diesem Experiment wirst Du S&auml;tze &uuml;ber Menschen, Handlungen und Berufe lesen, sowie Bilder ausw&auml;len. Dabei wird die Verarbeitung der Sprache im Kontext untersucht."
+                       + "In diesem Experiment wirst Du S&auml;tze &uuml;ber Menschen, Handlungen und Berufe lesen, sowie Bilder ausw&auml;hlen. Dabei wird die Verarbeitung der Sprache im Kontext untersucht."
                        + "<p>(1) <b>Als erstes siehst Du einen Kontextsatz.</b> Lies ihn Wort f&uuml;r Wort, indem Du die Leertaste dr&uuml;ckst. "
                        + "<p>Sobald Du jeden Satzteil (Wort) gelesen hast, dr&uuml;cke die <b>Leertaste</b> <b>mit dem rechten Daumen</b> (wenn Du rechtsh&auml;ndig bist), um den n&auml;chsten Satzteil zu enth&uuml;llen."
                        + "Wenn Du das Ende des Satzes erreicht hast, dr&uuml;cke erneut die Leertaste."
-                       + "<p><b>Versuche die Leertaste erst dann zu dr&uuml;cken, wenn Du jeden Satzteil vollst&auml;ndig gelesen hast</b>. "
+                       + "<p><b>Dr&uuml;cke die Leertaste erst dann, wenn Du jeden Satzteil vollst&auml;ndig gelesen hast</b>. "
                        + " Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten. Danke!"
                        
                       )
@@ -759,7 +759,7 @@ PennController("instructions",
                .remove(getText("bio_example4"))
                ,
                newText("instructions_c", "<p>(3) Nachdem Du diesen Satz zu Ende gelesen hast, wirst Du vier Bilder sehen."
-                       + " Deine n&auml;chste Aufgabe ist es, das Bild zu w&auml;hlen, das am besten zu dem letzten Satz passt, den Du gelesen hast."
+                       + " Deine n&auml;chste Aufgabe ist es, das Bild zu w&auml;hlen, <b>das am besten zu dem Substantiv (Nomen) aus dem letzten Satz passt, den Du gelesen hast</b>."
                        + " Bei der Bildauswahlaufgabe bitten wir Dich: <ul><li>den <b>linken Mittelfinger auf die Taste W</b> zu legen -> Dr&uuml;cke auf <b>'W'</b> f&uuml;r <b>das Bild <i>oben links</i></b></li> <li>den <b>linken Zeigefinger auf die Taste D </b>zu legen. -> Dr&uuml;cke auf <b>'D'</b>  f&uuml;r <b>das Bild <i>unten links</i></b>.</li>"
                        + " <li>den <b>rechten Mittelfinger auf die Taste O</b> zu legen. -> Dr&uuml;cke auf <b>'O'</b> f&uuml;r <b>das Bild <i>oben rechts</i></b> </li> <li>den <b>rechten Zeigefinger auf die Taste K</b> zu legen. -> Dr&uuml;cke auf <b>'K'</b>  f&uuml;r <b>das Bild <i>unten rechts</i></b>.</li> </ul>"
                       )
@@ -952,7 +952,7 @@ PennController.Template( PennController.GetTable("master_spr1_long.csv")
                                           .print( getImage("picture4") )
                                           
                                           */,
-                                          newTimer("timeout", 5000)
+                                          newTimer("timeout", 10000)
                                           .start()
                                           
                                           ,
@@ -1040,7 +1040,19 @@ PennController.Template( PennController.GetTable("master_spr1_long.csv")
                                           
                                       )
                                       
-                                      //log stuff
+                                      .log("item_number",variable.item_no)
+                                      .log("item_id", variable.item_id)
+                                      .log("type", variable.type)
+                                      .log("condition",variable.condition)
+                                      .log("social_context",variable.social_context)
+                                      .log("target_register",variable.target_context)
+                                      .log("register_match",variable.register_match)
+                                      .log("grammatical",variable.grammatical)
+                                      .log("expset", variable.expset)
+                                      .log("picture1", variable.picture1)
+                                      .log("picture2", variable.picture2)
+                                      .log("picture3", variable.picture3)
+                                      .log("picture4", variable.picture4)
                                       
                                      ]
                          
@@ -1255,6 +1267,7 @@ PennController( "break1" ,
                 ,
                 newText("continue_exp_final", "Lege bitte Deine Finger auf die Tastatur, so wie es in der Anleitung beschrieben wurde. Das Bild unten dient als Erinnerung."
                         +" Lies jeden Satz, indem Du auf die Leertaste dr&uuml;ckst. Dr&uuml;cke nicht auf die Leertaste, bevor Du den jeweiligen Satzteil fertiggelesen hast.<br>"
+						+ " Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten.<br>"
                         +"<br><br>W&auml;hle die Bilder aus, indem Du auf die Tasten :<ul><li><b>W </b> (<i>f&uuml;r das Bild oben links</>),</li> <li><b>D </b>(<i>f&uuml;r das Bild unten links</>),</li><li> <b>O </b>(<i>f&uuml;r das Bild oben rechts</>),</li> <li><b>K </b> (<i>f&uuml;r das Bild unten rechts </>) dr&uuml;ckst.</li></ul>"
                         +"<br><br><br><br>Dr&uuml;cke die <b>Leertaste</b>, um das Experiment zu starten."
                        )
@@ -1320,7 +1333,8 @@ PennController( "break2" ,
                 ,
                 newText("continue_exp_final", "Lege bitte Deine Finger auf die Tastatur, so wie es in der Anleitung beschrieben wurde. Das Bild unten dient als Erinnerung."
                         +" Lies jeden Satz, indem Du auf die Leertaste dr&uuml;ckst. Dr&uuml;cke nicht auf die Leertaste, bevor Du den jeweiligen Satzteil fertiggelesen hast.<br>"
-                        +"<br><br>W&auml;hle die Bilder aus, indem Du auf die Tasten :<ul><li><b>W </b> (<i>f&uuml;r das Bild oben links</>),</li> <li><b>D </b>(<i>f&uuml;r das Bild unten links</>),</li><li> <b>O </b>(<i>f&uuml;r das Bild oben rechts</>),</li> <li><b>K </b> (<i>f&uuml;r das Bild unten rechts </>) dr&uuml;ckst.</li></ul>"
+                        + " Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten.<br>"
+						+"<br><br>W&auml;hle die Bilder aus, indem Du auf die Tasten :<ul><li><b>W </b> (<i>f&uuml;r das Bild oben links</>),</li> <li><b>D </b>(<i>f&uuml;r das Bild unten links</>),</li><li> <b>O </b>(<i>f&uuml;r das Bild oben rechts</>),</li> <li><b>K </b> (<i>f&uuml;r das Bild unten rechts </>) dr&uuml;ckst.</li></ul>"
                         +"<br><br><br><br>Dr&uuml;cke die <b>Leertaste</b>, um das Experiment zu starten."
                        )
                 .settings.css("font-size", "20px")
@@ -1384,7 +1398,8 @@ PennController( "break3" ,
                 ,
                 newText("continue_exp_final", "Lege bitte Deine Finger auf die Tastatur, so wie es in der Anleitung beschrieben wurde. Das Bild unten dient als Erinnerung."
                         +" Lies jeden Satz, indem Du auf die Leertaste dr&uuml;ckst. Dr&uuml;cke nicht auf die Leertaste, bevor Du den jeweiligen Satzteil fertiggelesen hast.<br>"
-                        +"<br><br>W&auml;hle die Bilder aus, indem Du auf die Tasten :<ul><li><b>W </b> (<i>f&uuml;r das Bild oben links</>),</li> <li><b>D </b>(<i>f&uuml;r das Bild unten links</>),</li><li> <b>O </b>(<i>f&uuml;r das Bild oben rechts</>),</li> <li><b>K </b> (<i>f&uuml;r das Bild unten rechts </>) dr&uuml;ckst.</li></ul>"
+                        + " Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten.<br>"
+						+"<br><br>W&auml;hle die Bilder aus, indem Du auf die Tasten :<ul><li><b>W </b> (<i>f&uuml;r das Bild oben links</>),</li> <li><b>D </b>(<i>f&uuml;r das Bild unten links</>),</li><li> <b>O </b>(<i>f&uuml;r das Bild oben rechts</>),</li> <li><b>K </b> (<i>f&uuml;r das Bild unten rechts </>) dr&uuml;ckst.</li></ul>"
                         +"<br><br><br><br>Dr&uuml;cke die <b>Leertaste</b>, um das Experiment zu starten."
                        )
                 .settings.css("font-size", "20px")
