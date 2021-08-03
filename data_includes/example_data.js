@@ -1243,7 +1243,7 @@ PennController.Template( PennController.GetTable("master_spr1_long.csv")
 //******************************************************************************************************************************************
 PennController( "break1" ,
                 
-                newText("break_text", "<p><b>Zeit f&uuml;r die erste Pause!</b><br><p>Sie dauert etwa 1 Minute, aber wenn Du sie &uuml;berspringen oder fr&uuml;her beenden m&ouml;chtest, <b>dr&uuml;cke auf die Leertaste</b></p>Es wird empfohlen, diese Zeit zu nutzen, um Dich ein wenig zu entspannen.Wir bedanken uns bei Dir f&uuml;r Deine Aufmerksamkeit und Geduld!")
+                newText("break_text", "<p><b>Zeit f&uuml;r die erste Pause!</b><br><p>Sie dauert etwa 1 Minute, aber wenn Du sie &uuml;berspringen oder fr&uuml;her beenden m&ouml;chtest, <b>dr&uuml;cke auf die Leertaste</b></p>Es wird empfohlen, diese Zeit zu nutzen, um Dich ein wenig zu entspannen. Wir bedanken uns bei Dir f&uuml;r Deine Aufmerksamkeit und Geduld!")
                 .settings.css("font-size", "20px")
                 .settings.center()
                 .print()    
@@ -1267,9 +1267,9 @@ PennController( "break1" ,
                 ,
                 newText("continue_exp_final", "Lege bitte Deine Finger auf die Tastatur, so wie es in der Anleitung beschrieben wurde. Das Bild unten dient als Erinnerung."
                         +" Lies jeden Satz, indem Du auf die Leertaste dr&uuml;ckst. Dr&uuml;cke nicht auf die Leertaste, bevor Du den jeweiligen Satzteil fertiggelesen hast.<br>"
-						+ " Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten.<br>"
-                        +"<br><br>W&auml;hle die Bilder aus, indem Du auf die Tasten :<ul><li><b>W </b> (<i>f&uuml;r das Bild oben links</>),</li> <li><b>D </b>(<i>f&uuml;r das Bild unten links</>),</li><li> <b>O </b>(<i>f&uuml;r das Bild oben rechts</>),</li> <li><b>K </b> (<i>f&uuml;r das Bild unten rechts </>) dr&uuml;ckst.</li></ul>"
-                        +"<br><br><br><br>Dr&uuml;cke die <b>Leertaste</b>, um das Experiment zu starten."
+                        + " <b>Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten.</b><br>"
+                        +"<br><br><br>W&auml;hle das am besten passende Bild aus, indem Du auf die Tasten:<br><br><br><ul><li><b>W </b> (<i>f&uuml;r das Bild <b>oben links</b>),</li> <li><b>D </b>(<i>f&uuml;r das Bild <b>unten links</b>),</li><li> <b>O </b>(<i>f&uuml;r das Bild <b>oben rechts</b>),</li> <li><b>K </b> (<i>f&uuml;r das Bild <b>unten rechts </b>) dr&uuml;ckst.</li></ul>"
+                        +"<br><br>Dr&uuml;cke die <b>Leertaste</b>, um das Experiment zu starten."
                        )
                 .settings.css("font-size", "20px")
                 .settings.center()  
@@ -1279,7 +1279,7 @@ PennController( "break1" ,
                 ,
                 newCanvas("pre_end_break", 900, 600)
                 .settings.add(40, 20, getText("continue_exp_final"))
-                .settings.add(500, 65, getImage("instr"))
+                .settings.add(570, 150, getImage("instr"))
                 .settings.center()
                 .print()
                 ,
@@ -1303,13 +1303,13 @@ PennController( "break1" ,
     .setOption("countsForProgressBar", false)   //overrides some default settings, such as countsForProgressBar
     .setOption("hideProgressBar", true);
 
+
 //*******************************************************************************************************************************************************************
-// TAKE A BREAK 2/3
+// TAKE A BREAK - 2/3
 //******************************************************************************************************************************************
 PennController( "break2" ,
                 
-                
-                newText("break_text", "<p><b>Zeit f&uuml;r die zweite Pause!</b><br><p>Sie dauert etwa 1 Minute, aber wenn Du sie &uuml;berspringen oder fr&uuml;her beenden m&ouml;chtest, <b>dr&uuml;cke auf die Leertaste</b></p>Es wird empfohlen, diese Zeit zu nutzen, um Dich ein wenig zu entspannen.Wir bedanken uns bei Dir f&uuml;r Deine Aufmerksamkeit und Geduld!")
+                newText("break_text", "<p><b>Zeit f&uuml;r die zweite Pause!</b><br><p>Sie dauert etwa 1 Minute, aber wenn Du sie &uuml;berspringen oder fr&uuml;her beenden m&ouml;chtest, <b>dr&uuml;cke auf die Leertaste</b></p>Es wird empfohlen, diese Zeit zu nutzen, um Dich ein wenig zu entspannen. Wir bedanken uns bei Dir f&uuml;r Deine Aufmerksamkeit und Geduld!")
                 .settings.css("font-size", "20px")
                 .settings.center()
                 .print()    
@@ -1333,9 +1333,9 @@ PennController( "break2" ,
                 ,
                 newText("continue_exp_final", "Lege bitte Deine Finger auf die Tastatur, so wie es in der Anleitung beschrieben wurde. Das Bild unten dient als Erinnerung."
                         +" Lies jeden Satz, indem Du auf die Leertaste dr&uuml;ckst. Dr&uuml;cke nicht auf die Leertaste, bevor Du den jeweiligen Satzteil fertiggelesen hast.<br>"
-                        + " Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten.<br>"
-						+"<br><br>W&auml;hle die Bilder aus, indem Du auf die Tasten :<ul><li><b>W </b> (<i>f&uuml;r das Bild oben links</>),</li> <li><b>D </b>(<i>f&uuml;r das Bild unten links</>),</li><li> <b>O </b>(<i>f&uuml;r das Bild oben rechts</>),</li> <li><b>K </b> (<i>f&uuml;r das Bild unten rechts </>) dr&uuml;ckst.</li></ul>"
-                        +"<br><br><br><br>Dr&uuml;cke die <b>Leertaste</b>, um das Experiment zu starten."
+                        + " <b>Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten.</b><br>"
+                        +"<br><br><br>W&auml;hle das am besten passende Bild aus, indem Du auf die Tasten:<br><br><br><ul><li><b>W </b> (<i>f&uuml;r das Bild <b>oben links</b>),</li> <li><b>D </b>(<i>f&uuml;r das Bild <b>unten links</b>),</li><li> <b>O </b>(<i>f&uuml;r das Bild <b>oben rechts</b>),</li> <li><b>K </b> (<i>f&uuml;r das Bild <b>unten rechts </b>) dr&uuml;ckst.</li></ul>"
+                        +"<br><br>Dr&uuml;cke die <b>Leertaste</b>, um das Experiment zu starten."
                        )
                 .settings.css("font-size", "20px")
                 .settings.center()  
@@ -1345,7 +1345,7 @@ PennController( "break2" ,
                 ,
                 newCanvas("pre_end_break", 900, 600)
                 .settings.add(40, 20, getText("continue_exp_final"))
-                .settings.add(500, 65, getImage("instr"))
+                .settings.add(570, 150, getImage("instr"))
                 .settings.center()
                 .print()
                 ,
@@ -1359,7 +1359,7 @@ PennController( "break2" ,
                 ,
                 newTimer(5000)
                 .start()
-                .wait()                 
+                .wait()             
                )   
     
     .log("type", "break")
@@ -1369,17 +1369,18 @@ PennController( "break2" ,
     .setOption("countsForProgressBar", false)   //overrides some default settings, such as countsForProgressBar
     .setOption("hideProgressBar", true);
 
+
 //*******************************************************************************************************************************************************************
-// TAKE A BREAK 3/3
+// TAKE A BREAK - 1/3
 //******************************************************************************************************************************************
 PennController( "break3" ,
                 
-                
-                newText("break_text", "<p><b>Zeit f&uuml;r die letzte Pause!</b><br><p>Sie dauert etwa 1 Minute, aber wenn Du sie &uuml;berspringen oder fr&uuml;her beenden m&ouml;chtest, <b>dr&uuml;cke auf die Leertaste</b></p>Es wird empfohlen, diese Zeit zu nutzen, um Dich ein wenig zu entspannen.Wir bedanken uns bei Dir f&uuml;r Deine Aufmerksamkeit und Geduld!")
+                newText("break_text", "<p><b>Zeit f&uuml;r die letzte Pause!</b><br><p>Sie dauert etwa 1 Minute, aber wenn Du sie &uuml;berspringen oder fr&uuml;her beenden m&ouml;chtest, <b>dr&uuml;cke auf die Leertaste</b></p>Es wird empfohlen, diese Zeit zu nutzen, um Dich ein wenig zu entspannen. Wir bedanken uns bei Dir f&uuml;r Deine Aufmerksamkeit und Geduld!")
                 .settings.css("font-size", "20px")
                 .settings.center()
                 .print()    
                 ,
+                
                 newTimer("break_timer", 60000)
                 .start()                
                 ,
@@ -1398,9 +1399,9 @@ PennController( "break3" ,
                 ,
                 newText("continue_exp_final", "Lege bitte Deine Finger auf die Tastatur, so wie es in der Anleitung beschrieben wurde. Das Bild unten dient als Erinnerung."
                         +" Lies jeden Satz, indem Du auf die Leertaste dr&uuml;ckst. Dr&uuml;cke nicht auf die Leertaste, bevor Du den jeweiligen Satzteil fertiggelesen hast.<br>"
-                        + " Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten.<br>"
-						+"<br><br>W&auml;hle die Bilder aus, indem Du auf die Tasten :<ul><li><b>W </b> (<i>f&uuml;r das Bild oben links</>),</li> <li><b>D </b>(<i>f&uuml;r das Bild unten links</>),</li><li> <b>O </b>(<i>f&uuml;r das Bild oben rechts</>),</li> <li><b>K </b> (<i>f&uuml;r das Bild unten rechts </>) dr&uuml;ckst.</li></ul>"
-                        +"<br><br><br><br>Dr&uuml;cke die <b>Leertaste</b>, um das Experiment zu starten."
+                        + " <b>Bitte vermeide es, wiederholt die Leertaste zu dr&uuml;cken, um den Satz schneller zu lesen oder mehrere W&ouml;rter auf einmal zu lesen. Das widerspricht dem ganzen Sinn des Experiments und verf&auml;lscht die Daten.</b><br>"
+                        +"<br><br><br>W&auml;hle das am besten passende Bild aus, indem Du auf die Tasten:<br><br><br><ul><li><b>W </b> (<i>f&uuml;r das Bild <b>oben links</b>),</li> <li><b>D </b>(<i>f&uuml;r das Bild <b>unten links</b>),</li><li> <b>O </b>(<i>f&uuml;r das Bild <b>oben rechts</b>),</li> <li><b>K </b> (<i>f&uuml;r das Bild <b>unten rechts </b>) dr&uuml;ckst.</li></ul>"
+                        +"<br><br>Dr&uuml;cke die <b>Leertaste</b>, um das Experiment zu starten."
                        )
                 .settings.css("font-size", "20px")
                 .settings.center()  
@@ -1410,7 +1411,7 @@ PennController( "break3" ,
                 ,
                 newCanvas("pre_end_break", 900, 600)
                 .settings.add(40, 20, getText("continue_exp_final"))
-                .settings.add(500, 65, getImage("instr"))
+                .settings.add(570, 150, getImage("instr"))
                 .settings.center()
                 .print()
                 ,
@@ -1424,7 +1425,7 @@ PennController( "break3" ,
                 ,
                 newTimer(5000)
                 .start()
-                .wait()                   
+                .wait()             
                )   
     
     .log("type", "break")
